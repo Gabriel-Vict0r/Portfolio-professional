@@ -1,0 +1,43 @@
+@use '../mixins'
+@use '../variables'
+
+.hab
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    padding: .2rem 0rem
+    transition: all .5s ease-in-out
+    cursor: pointer
+    border-radius: 70px
+    @include mixins.max-width(medium)
+        justify-content: flex-start
+
+    &-icon
+        display: flex
+        align-items: center
+        justify-content: center
+        color: variables.$color-blue-secondary
+        font-size: 3rem
+        margin-right: .5rem
+        @include mixins.max-width(medium)
+            font-size: 2.5rem
+        @include mixins.max-width(xsmall)
+            font-size: 1.5rem
+
+    &-text
+        font-weight: 600
+        color: variables.$color-white-standard
+        font-size: 1.2rem
+        @include mixins.max-width(medium)
+            font-size: 1.1rem
+            font-weight: 400
+        @include mixins.max-width(xsmall)
+            font-size: 1rem
+        transition: all .5s ease-in-out
+
+.habHover
+    background: variables.$color-blue-secondary
+
+.habTextHover
+    color: variables.$color-white-standard

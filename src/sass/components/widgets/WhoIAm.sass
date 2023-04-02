@@ -1,0 +1,52 @@
+@use '../../mixins'
+@use '../../variables'
+
+.about
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: top
+    padding: 5rem
+    margin: 5rem auto 2rem auto
+    @include mixins.max-width(large)
+        padding: 2rem
+        gap: 2rem
+    @include mixins.max-width(medium)
+        flex-direction: column-reverse
+        align-items: flex-start
+    @include mixins.max-width(xsmall)
+        padding: 1rem
+    &-image img
+        width: 350px
+        @include mixins.max-width(large)
+            width: 250px
+
+    &-text
+        width: 500px
+        position: relative
+        margin-top: 2rem
+        @include mixins.max-width(large)
+            margin-top: 0
+        @include mixins.max-width(medium)
+            width: 100%
+        h2
+            font-size: 2.5rem
+            color: variables.$color-white-standard
+            padding: 1rem 0
+            @include mixins.max-width(large)
+                font-size: 2.2rem
+
+        p
+            font-size: 1.3rem
+            color: rgba(255, 255, 255, 0.699)
+            @include mixins.max-width(large)
+                font-size: 1.2rem
+
+        &-circle
+            width: 350px
+            position: absolute
+            top: -70px
+            right: -100px
+            animation: circlePulsing 5s 2s infinite ease-in-out
+
+

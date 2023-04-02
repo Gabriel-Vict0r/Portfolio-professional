@@ -1,0 +1,94 @@
+@use '../../mixins'
+@use '../../variables'
+.svg-light-left
+    position: absolute
+    width: 823.19px
+    height: 562.5px
+    left: -700px
+    top: 28.92px
+    background: #2361FF
+    filter: blur(150px)
+    // transform: matrix(0.09, 1, 1, -0.09, 0, 0)
+    transform: matrix(0, 0.5, 0.8, 0, 0, 0)
+    animation: showLight 10s forwards ease-in-out
+@keyframes showLight
+    0%
+        opacity: 0
+        transform: matrix(0, 0.5, 0.8, 0, 0, 0)
+    100%
+        opacity: 1
+        transform: matrix(0.09, 1, 1, -0.09, 0, 0)
+
+.svg-light-right
+    position: absolute
+    width: 250px
+    height: 400px
+    right: -20px
+    top: 220px
+
+    background: #2361FF
+    filter: blur(125.049px)
+    transform: matrix(0.09, 1, 1, -0.09, 0, 0)
+    z-index: -1
+    @include mixins.max-width(large)
+        right: -80px
+    @include mixins.max-width(medium)
+        display: none
+.copy
+    position: relative
+    max-width: 500px
+.circle
+    position: absolute
+    top: -80px
+    left: -140px
+    z-index: -1
+    opacity: 0
+    animation: circlePulsing 5s 2s infinite ease-in-out
+@keyframes circlePulsing
+    0%
+        opacity: 0
+    
+    50%
+        opacity: 1
+
+    100%
+        opacity: 0
+.first-content
+    @include mixins.header__center
+    justify-content: center
+    gap: 4rem
+    margin-top: 13rem
+    @include mixins.max-width(medium)
+        flex-direction: column
+    
+.computer
+    width: 400px
+    @include mixins.max-width(large)
+        width: 300px
+
+.copy-title
+    font-size: 2.8rem
+    color: variables.$color-white-standard
+    font-weight: 600
+    margin-bottom: 1rem
+    @include mixins.max-width(large)
+        font-size: 2.5rem
+    @include mixins.max-width(medium)
+        font-size: 2.188rem
+        text-align: center
+    @include mixins.max-width(xsmall)
+        font-size: 2rem
+
+    &-highlight
+        background-image: variables.$gradient-principal
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+.copy-text
+    color: variables.$color-white-standard
+    font-size: 1.25rem
+    font-weight: 300
+    @include mixins.max-width(medium)
+        font-size: 1.1rem
+        text-align: center

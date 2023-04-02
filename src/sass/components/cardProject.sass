@@ -1,0 +1,77 @@
+@use '../mixins'
+@use '../variables'
+
+.project
+    max-width: 90%
+    width: 425px
+    margin: 3rem auto
+    height: auto
+    max-height: 500px
+    display: flex
+    flex-direction: column
+    border-radius: 8px
+    border: 1px solid variables.$color-background-container-tirty
+    background: variables.$color-background-container-tirty
+    @include mixins.max-width(xsmall)
+        // height: 450px
+
+    &-image
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        width: 100%
+        height: 225px
+        border-radius: 8px 8px 0 0
+        filter: opacity(0.4)
+        transition: all .4s ease-in-out
+        @include mixins.max-width(xsmall)
+            height: 150px
+
+    &-article
+        background: variables.$gradiend-containers-services
+        padding: 1.5rem
+        // max-height: 225px
+
+        &-title
+            color: variables.$color-white-standard
+            font-weight: 400
+            letter-spacing: 1.8px
+            font-size: 1.2rem
+            margin-bottom: 1rem
+
+        &-text
+            color: rgba(255, 255, 255, 0.589)
+            font-weight: 300
+            font-size: 1rem
+
+    &-info
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        margin: 1rem auto
+        color: variables.$color-white-standard
+        border-top: 1px solid rgba(255, 255, 255, 0.185)
+        padding-top: 1rem
+
+        a
+            background: variables.$color-background-container-tirty
+            padding: .5rem 1.2rem
+            border-radius: 15px
+            font-size: 1rem
+            color: variables.$color-white-standard
+            text-decoration: none
+            font-weight: 300
+            transition: all .3s ease-in-out
+            &:hover
+                background: variables.$color-blue-secondary
+                
+
+.SGC
+    background-image: url(../../img/projects/SGC.png)
+
+.Costs
+    background-image: url(../../img/projects/Costs.png)
+
+.OpacityImg
+    filter: opacity(1)

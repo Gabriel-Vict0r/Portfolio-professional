@@ -1,0 +1,39 @@
+@use '../mixins'
+@use '../variables'
+
+.btn_contactMe
+    background: variables.$gradient-principal
+    width: 150px
+    height: 40px
+    border: none
+    border-radius: 25px
+    font-weight: 400
+    color: variables.$color-white-standard
+    cursor: pointer
+    font-size: 1.1rem
+    letter-spacing: 2px
+    transition: all .2s ease-in-out
+    @include mixins.max-width(large)
+        width: 120px
+        height: 35px
+        font-size: 1.875rem
+
+.btn_contactLarge
+    @extend .btn_contactMe
+    width: 300px
+    height: 50px
+    font-size: 1.5rem
+    @include mixins.max-width(xsmall)
+        width: 250px
+.btn_contactMe:hover
+    background: variables.$gradiend-principal-reverse
+    scale: 1.02
+
+.btnService
+    width: 350px
+    height: 50px
+    @include mixins.max-width(large)
+        font-size: 1.3rem
+    @include mixins.max-width(xsmall)
+        width: 250px
+        font-size: 1rem
