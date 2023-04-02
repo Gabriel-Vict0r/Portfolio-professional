@@ -1,4 +1,4 @@
-﻿<img src='https://github.com/Gabriel-Vict0r/Portfolio-Pro/blob/main/cover_github.jpg' alt='Capa do Portfólio'>
+﻿<img src='https://github.com/Gabriel-Vict0r/Portfolio-professional/blob/main/cover_github.jpg?raw=true' alt='Capa do Portfólio'>
 <h1>Portfólio</h1>
 <p>Este repositório contém o código do meu portfólio pessoal. O portfólio é uma página web que exibe informações sobre mim, meus projetos, habilidades e serviços que ofereço.<p>
 
