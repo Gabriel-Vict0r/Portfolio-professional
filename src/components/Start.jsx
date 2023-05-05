@@ -9,7 +9,7 @@ function Start({ id }) {
   return (
     <section className="first-content" id={id}>
       <div className="svg-light-left"></div>
-      <Reveal duration={5000}>
+      <Reveal>
         <article className="copy">
           <img src={CircleLeft} alt="circulo decorativo" className="circle" />
           <h1 className="copy-title">
@@ -22,7 +22,7 @@ function Start({ id }) {
           </p>
         </article>
       </Reveal>
-      <Reveal wait={5000}>
+      <Reveal >
         <img src={Computer} alt="Computador" className="computer" />
       </Reveal>
       <div className="svg-light-right"></div>

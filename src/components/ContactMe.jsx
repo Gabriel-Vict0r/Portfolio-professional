@@ -89,7 +89,7 @@ const ContactMe = ({id}) => {
   const [messageInput, setMessageInput] = useState("");
   return (
     <section className="contact" id={id}>
-      <Reveal left={true} delay={1000}>
+      <Reveal>
         <img
           src={ElementContact}
           alt="elemento decorativo"
@@ -97,7 +97,7 @@ const ContactMe = ({id}) => {
         />
       </Reveal>
       <div className="light-form" />
-      <Reveal bottom={true} delay={1000}>
+      <Reveal>
         <form className="contact-form" onSubmit={handleSubmit(sendEmail)}>
           <h2>Contate-me</h2>
           <div className="field">

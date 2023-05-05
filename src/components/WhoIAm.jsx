@@ -7,13 +7,13 @@ const WhoIAm = ({ id }) => {
   return (
     <section className="about" id={id}>
       <div className="about-image">
-        <Reveal delay={5000} left={true}>
+        <Reveal>
           <img src={MyPicture} alt="Gabriel Victor foto" />
         </Reveal>
       </div>
       <article className="about-text">
         <img src={CircleLeftWho} alt="círculo decorativo" className="about-text-circle" />
-        <Reveal right={true}>
+        <Reveal>
           <h2>Quem eu sou</h2>
           <p>
             Desenvolvedor Web apaixonado por transformar ideias em soluções

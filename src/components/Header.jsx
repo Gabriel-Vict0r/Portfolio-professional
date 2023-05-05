@@ -34,7 +34,6 @@ function Header() {
   }, []);
   return (
     <Reveal top={true}>
-
       <header className={colorActive ? "header activeColor" : "header"}>
         <nav className="header-nav">
           <Link

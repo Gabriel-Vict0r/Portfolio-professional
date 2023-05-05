@@ -13,7 +13,7 @@ function Services({ id }) {
   return (
     <section className="container-services" id={id}>
       <div className="services">
-        <Reveal delay={5000} left={true}>
+        <Reveal>
           <img src={ElementLeft} alt="luz" className="elemento-left" />
         </Reveal>
         {copyServices.map((element) => (
@@ -27,7 +27,7 @@ function Services({ id }) {
         <Reveal>
           <img src={LightRight} alt="luz" className="light-right" />
         </Reveal>
-        <Reveal delay={3000} bottom={true}>
+        <Reveal>
           <img
             src={RetangleBackground}
             alt="detalhe de um retângulo"
@@ -38,7 +38,7 @@ function Services({ id }) {
           <img src={LightLeft} alt="Luz" className="light-left" />
         </Reveal>
       </div>
-      <Reveal bottom={true}>
+      <Reveal>
         <Link
           to="section_ContactMe"
           smooth={true}

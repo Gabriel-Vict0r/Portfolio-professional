@@ -10,7 +10,8 @@
     position: fixed
     top: 0
     left: 0
-    width: 100%
+    width: 100vw
+    
 
     &-nav
         @include mixins.header__center
@@ -47,7 +48,7 @@
                 background-color: variables.$color-background-principal
                 padding: 50px
                 gap: 3.5rem
-                animation: showMenu .7s forwards ease-in-out
+                animation: showMenu 1s forwards ease-in-out
             @include mixins.max-width(xsmall)
                 gap: 1.5rem
 
@@ -79,15 +80,17 @@
 
 @keyframes showMenu
     0%
-        height: 500px
-        transform: translateY(-100vh)
+        height: 50px
+        transform: translateX(100vh)
+        border-radius: 500%
         opacity: 0
         z-index: -999
 
     100%
         height: 500px
-        transform: translateY(0)
+        transform: translateX(0)
         opacity: 1
+        border-radius: 0
 
 .contain_Menu
     // height: 0

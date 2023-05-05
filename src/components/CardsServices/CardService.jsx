@@ -7,7 +7,7 @@ import DetailsCardService from "../../img/services/details_card_services.svg";
 const CardService = ({ title, text, pathImg }) => {
   const [animation, setAnimation] = useState(false)
   return (
-    <Reveal delay={2000} bottom={true}>
+    <Reveal>
       <div
         onMouseOver={() => setAnimation(true)}
         onMouseLeave={() => setAnimation(false)}

@@ -28,7 +28,7 @@ function Projects({ id }) {
   const regexProjects = /-/ig;
   return (
     <section className="projects" id={id}>
-      <Reveal left={true}>
+      <Reveal>
         <img
           src={ElementProject}
           alt="elemento decorativo"
@@ -65,7 +65,7 @@ function Projects({ id }) {
           className="retangle-bg"
         />
         {filterProjects.map((repository) => (
-          <Reveal bottom={true}>
+          <Reveal >
             <SwiperSlide key={repository.id}>
               <CardProject
                 title={repository.name.replace(regexProjects, " ")}
