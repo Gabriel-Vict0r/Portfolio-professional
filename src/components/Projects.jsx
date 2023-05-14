@@ -65,7 +65,7 @@ function Projects({ id }) {
           className="retangle-bg"
         />
         {filterProjects.map((repository) => (
-          <Reveal >
+          <Reveal>
             <SwiperSlide key={repository.id}>
               <CardProject
                 title={repository.name.replace(regexProjects, " ")}
@@ -82,5 +82,4 @@ function Projects({ id }) {
     </section>
   );
 }
-
 export default Projects;

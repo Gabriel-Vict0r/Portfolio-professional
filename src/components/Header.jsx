@@ -20,8 +20,11 @@ function Header() {
   useEffect(() => {
     if (!isLarge) {
       setOpen(true);
+
     }
   }, [isOpen]);
+
+  //Switch the background-color from header
   useEffect(() => {
     function scrollPosition() {
       if (window.scrollY > 40) {
@@ -32,6 +35,7 @@ function Header() {
     }
     window.addEventListener("scroll", scrollPosition);
   }, []);
+  console.log(isOpen)
   return (
     <Reveal top={true}>
       <header className={colorActive ? "header activeColor" : "header"}>
@@ -55,9 +59,12 @@ function Header() {
               color="#F0F0F0"
               rounded
               toggled={isOpen}
-              toggle={() => (isOpen ? setOpen(false) : setOpen(true))}
+              toggle={() => (isOpen ? setTimeout(() => {
+                setOpen(false)
+              }, 100) : setOpen(true))}
             />
           )}
+          
           {isOpen && (
             <ul className={isOpen ? "header-nav-list" : "contain_Menu"}>
               {menu.map((element) => (

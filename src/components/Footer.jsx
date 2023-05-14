@@ -7,21 +7,17 @@ const Footer = ({ id }) => {
     <footer>
       <p>Copyright &copy; Gabriel Victor | Desenvolvedor Web 2023</p>
       <div className="icons">
-        <a href="http://" key={1}>
+        <a href="https://api.whatsapp.com/send?phone=7799030842" key={1}>
           <IoLogoWhatsapp className="icon-footer" />
         </a>
-        <a href="http://">
+        <a href="https://github.com/Gabriel-Vict0r">
           <IoLogoGithub className="icon-footer" />
         </a>
-        <a href="http://">
-          <RiInstagramFill className="icon-footer" />
-        </a>
-        <a href="http://">
+        <a href="linkedin.com/in/gabriel-victor-webdeveloper/">
           <RiLinkedinBoxFill className="icon-footer" />
         </a>
       </div>
     </footer>
   );
 };
-
 export default Footer;

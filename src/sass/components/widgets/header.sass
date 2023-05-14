@@ -37,7 +37,6 @@
             @include mixins.max-width(large)
                 display: flex
                 width: 100%
-                height: 0
                 flex-direction: column
                 justify-content: space-around
                 align-items: center
@@ -46,8 +45,8 @@
                 top: 80px
                 border-top: 1px solid variables.$color-background-container-tirty
                 background-color: variables.$color-background-principal
-                padding: 50px
-                gap: 3.5rem
+                padding: 0
+                gap: 0
                 animation: showMenu 1s forwards ease-in-out
             @include mixins.max-width(xsmall)
                 gap: 1.5rem
@@ -59,10 +58,11 @@
                 font-weight: 400
                 line-height: 24.6px
                 font-style: normal
-                font-size: 1.1rem
-                transition: all .2s ease-in-out
+                font-size: 1.2rem
+                transition: all 1s ease-in-out
                 @include mixins.max-width(large)
-                    font-size: 1.875rem
+                    font-size: 0
+                    animation: showLetters 1s forwards ease-in-out
                 @include mixins.max-width(medium)
                     font-size: 1.4rem
 
@@ -77,18 +77,22 @@
     color: variables.$color-blue-secondary
 
 
+@keyframes showLetters
+    0%
+        font-size: 0
+
+    100%
+        font-size: 1.5rem
 
 @keyframes showMenu
     0%
-        height: 50px
-        transform: translateX(100vh)
-        border-radius: 500%
+        height: 0
         opacity: 0
-        z-index: -999
 
     100%
-        height: 500px
-        transform: translateX(0)
+        height: 550px
+        padding: 50px
+        gap: 3.5rem
         opacity: 1
         border-radius: 0
 
@@ -102,11 +106,15 @@
 @keyframes containMenu
     0%
         height: 500px
+        //transform: translateX(100vh)
         opacity: 1
-        transform: translateY(0)
+        //z-index: -999
+
     100%
         height: 0
-        transform: translateY(-100vh)
+        padding: 0
+        gap: 0
+        //transform: translateX(0)
         opacity: 0
 
 .activeColor
