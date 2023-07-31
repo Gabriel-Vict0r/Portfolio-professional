@@ -32,7 +32,7 @@ const schema = yup.object({
 });
 
 //register the name of inputs, function from validation and function for show errors
-const ContactMe = ({id}) => {
+const ContactMe = ({ id }) => {
   const {
     register,
     handleSubmit,
@@ -160,6 +160,7 @@ const ContactMe = ({id}) => {
           </div>
           <div className="field">
             <TextareaAutosize
+              minRows={2}
               placeholder="Mensagem"
               {...register("message")}
               value={messageInput}

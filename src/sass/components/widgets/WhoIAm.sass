@@ -17,8 +17,10 @@
     @include mixins.max-width(xsmall)
         padding: 1rem
     &-image img
+        height: auto
         width: 350px
         @include mixins.max-width(large)
+            height: auto
             width: 250px
 
     &-text
@@ -48,5 +50,3 @@
             top: -70px
             right: -100px
             animation: circlePulsing 5s 2s infinite ease-in-out
-
-

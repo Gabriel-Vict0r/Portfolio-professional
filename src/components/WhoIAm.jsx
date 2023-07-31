@@ -1,7 +1,7 @@
 import React from 'react'
 import '../sass/components/widgets/WhoIAm.sass'
 import { Reveal } from 'react-reveal';
-import MyPicture from "../img/whoIAm/Foto do Expert.svg";
+import MyPicture from "../img/whoIAm/MyPicture.webp";
 import CircleLeftWho from "../img/whoIAm/Circulo-right.svg";
 const WhoIAm = ({ id }) => {
   return (
@@ -18,8 +18,8 @@ const WhoIAm = ({ id }) => {
           <p>
             Desenvolvedor Web apaixonado por transformar ideias em soluções
             digitais eficientes e inovadoras. Sou formado como técnico em Informática pelo IFBA - campus
-            Barreiras, e atualmente estou cursando Big Data & Inteligência Artificial na PUC-GO. Com mais de 2 anos de experiência, ofereço habilidades
-            sólidas em Javascript, ReactJs, sass, NodeJs e MongoDb.
+            Barreiras, e atualmente estou cursando Análise e Desenvolvimento de Sistemas na Uninassau. Com muita disposição, ofereço habilidades
+            sólidas em Javascript, ReactJs e TypeScript.
           </p>
         </Reveal>
       </article>

@@ -35,7 +35,6 @@ function Header() {
     }
     window.addEventListener("scroll", scrollPosition);
   }, []);
-  console.log(isOpen)
   return (
     <Reveal top={true}>
       <header className={colorActive ? "header activeColor" : "header"}>

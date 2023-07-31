@@ -25,7 +25,7 @@ function Projects({ id }) {
   const filterProjects = repositores.filter(
     (element) => element.license != null
   );
-  const regexProjects = /-/ig;
+  const regexProjects = /-/gi;
   return (
     <section className="projects" id={id}>
       <Reveal>
@@ -74,6 +74,7 @@ function Projects({ id }) {
                 urlProject={repository.homepage}
                 data_project={2023}
                 key={repository.id}
+                urlGit={repository.html_url}
               />
             </SwiperSlide>
           </Reveal>
