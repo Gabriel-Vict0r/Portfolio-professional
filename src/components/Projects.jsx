@@ -23,7 +23,7 @@ function Projects({ id }) {
       .catch((error) => console.log(error));
   }, []);
   const filterProjects = repositores.filter(
-    (element) => element.license != null
+    (element) => element.license != null && element.name != "match-in-christ"
   );
   const regexProjects = /-/gi;
   return (
